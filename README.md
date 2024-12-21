@@ -1,6 +1,8 @@
 # mysql_project
 mysql_project
 
+challenges:-
+
 SELECT * FROM instagram_clone_db.users;
 
 -- 1. find top 5 users who have join early.
@@ -8,6 +10,7 @@ select * from users order by created_at asc limit 5;
 
 -- 2. find the days users created there accounts.
 select dayname(created_at) as day_of_the_week, count(*) as total_account from users group by day_of_the_week order by total_account desc;
+
 -- 3. find the user who have never posted a photo.
 select users.id,users.username,users.created_at as users_joining_date
 from users 
